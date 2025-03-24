@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using TMPro;
-using DG.Tweening;
 
 public class DragObject : MonoBehaviour
 {
@@ -22,7 +21,7 @@ public class DragObject : MonoBehaviour
 
     public Sprite icon; // آیکون آیتم
 
-    public DOTweenAnimation _doTweenAnimation;
+  
 
     public Animator backpackanimation;
 
@@ -91,7 +90,6 @@ public class DragObject : MonoBehaviour
             print("ok");
             FindObjectOfType<Inventory>().AddItem(this);
             backpackanimation.SetBool("open", true);
-            // _doTweenAnimation.DOPlay();
             gameObject.SetActive(false); // 🚀 به جای حذف، غیرفعال شود
         }
     }
